@@ -12,7 +12,7 @@ Dado quando eu acessar o portal de login na plataforma EBAC Shop
 
 
 
-Scenario: Conclusão de cadastro
+Cenario: Conclusão de cadastro
 
 When : Preencher os campos de dados pessoais
 And : não preencher os campos com asteristico 
