@@ -1,7 +1,7 @@
 #language: pt
 
 
-Feature: Autentificação de login
+Funcionalidade: Autentificação de login
 
 Eu como cliente da EBAC-Shop , gostaria de concluir meu cadastro
 para finalizar minhas compras
@@ -14,27 +14,28 @@ Dado quando eu acessar o portal de login na plataforma EBAC Shop
 
 Cenario: Conclusão de cadastro
 
-When : Preencher os campos de dados pessoais
-And : não preencher os campos com asteristico 
-Then : meu cadastro é invalidado 
+Quando : Preencher os campos de dados pessoais
+E : não preencher os campos com asteristico 
+Então : meu cadastro é invalidado 
 
 
 
-Scenario: Dados invalidos 
+Cenario: Dados invalidos 
 
-When : Eu preencher o campo com email invalido 
-Then : dever restrigir o acesso e exibir uma mensagem "email invalido"
-
-
-Scenario: Acesso negado 
-
-When : Eu tentar me cadastrar faltando campos obrigatórios
-Then : Deve negar o cadastro com a mensagem de alerta "todos os campos devem ser preenchidos"
+Quando : Eu preencher o campo com email invalido 
+Então : dever restrigir o acesso e exibir uma mensagem "email invalido"
 
 
-Scenario Outline: Dados invalidos negar acesso
+Cenario: Acesso negado 
 
-Example:
+Quando : Eu tentar me cadastrar faltando campos obrigatórios
+Então : Deve negar o cadastro com a mensagem de alerta "todos os campos devem ser preenchidos"
+
+Exemplo:
+
+Esquema do cenário: Dados invalidos negar acesso
+
+
 Quando eu digitar o <email>
 e o campo aparecer em vermelho
 deve se negar o cadastro e mostra uma "mensagem"
